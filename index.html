@@ -1,115 +1,556 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Site Maintenance</title>
-    <meta charset="utf-8" />
-    <meta name="robots" content="noindex" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      body {
-        text-align: center;
-        padding: 20px;
-        font: 20px Helvetica, sans-serif;
-        color: #f2d1a0;
-      }
-      @media (min-width: 768px) {
-        body {
-          padding-top: 50px;
-        }
-      }
-      h1 {
-        font-size: 100%;
-        text-align: center;
-      }
-      p {
-        text-align: center;
-        font-size: 80%;
-      }
-      article {
-        display: block;
-        text-align: left;
-        max-width: 650px;
-        margin: 0 auto;
-      }
-      a {
-        color: #dc8100;
-        text-decoration: none;
-      }
-      a:hover {
-        color: #efe8e8;
-        text-decoration: none;
-      }
-      img.logo {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        text-align: center;
-      }
-      img.character {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body bgcolor="2e2929">
-    <img
-      class="logo"
-      src="https://i.ibb.co.com/dMbYT0y/Logo.png"
-      alt="Froze 'N Fried Logo"
-    />
+/**
+* Template Name: ComingSoon
+* Template URL: https://bootstrapmade.com/comingsoon-free-html-bootstrap-template/
+* Updated: Mar 17 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 
-    <img
-      class="character"
-      src="https://i.ibb.co.com/hHsG9vf/Character.png"
-      alt="Froze 'N Fried Character"
-    />
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", "sans-serif";
+  
+  background: url("../img/bg.jpg") top center no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-    <article>
-      <h1>This Website Is Under Construction</h1>
-      <div>
-        <p>
-          Sorry for the inconvenience but we&rsquo;re performing some
-          maintenance at the moment, otherwise we&rsquo;ll be ready to Froze 'N
-          Fried you as soon as possible
-        </p>
-        <p>&mdash; Froze 'N Fried &mdash;</p>
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        "
-      >
-        <p class="day"></p>
-        <p class="hour"></p>
-        <p class="minute"></p>
-        <p class="second"></p>
-      </div>
-    </article>
-    <script>
-      const countDown = () => {
-        const countDay = new Date("July 05, 2024 00:00:00");
-        const now = new Date();
-        const counter = countDay - now;
-        const second = 1000;
-        const minute = second * 60;
-        const hour = minute * 60;
-        const day = hour * 24;
-        const textDay = Math.floor(counter / day);
-        const textHour = Math.floor((counter % day) / hour);
-        const textMinute = Math.floor((counter % hour) / minute);
-        const textSecond = Math.floor((counter % minute) / second);
-        document.querySelector(".day").innerText = textDay + " Days";
-        document.querySelector(".hour").innerText = textHour + " Hours";
-        document.querySelector(".minute").innerText = textMinute + " Minutes";
-        document.querySelector(".second").innerText = textSecond + " Seconds";
-      };
-      setInterval(countDown, 1000);
-    </script>
-  </body>
-</html>
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(11, 11, 11, 0.535);
+}
+
+@media (min-width: 780px) {
+  body {
+    background-attachment: fixed;
+  }
+  .logo{
+    max-width: 10%; 
+  }
+ .character{
+    display: none;
+  }
+  
+}
+
+a {
+  color: #ffdfa8;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "PeachyKeenJF", sans-serif;
+  color: #6b3e26;
+}
+h2{
+  font-family:"Giulia Plain";
+}
+h4{
+  font-family: "PeachyKeenJF", sans-serif;
+}
+
+#main {
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #ffe6bb;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #ffe6bb;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #ffe6bb;
+  color: #ffe6bb;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+  /* countdown */
+}
+
+#header img.logo{
+  max-width: 500px;
+  text-align: center;
+
+}
+#header img.character{
+  max-width: 235px;
+  text-align: center;
+}
+#header h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff6e9;
+  
+}
+
+#header h2 {
+  color: #fff6e9;
+  margin-bottom: 40px;
+  font-size: 22px;
+  text-align: center;
+}
+
+#header .countdown {
+  margin-bottom: 80px;
+}
+
+#header .countdown div {
+  text-align: center;
+  margin: 10px;
+  width: 100px;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.12);
+  border-top: 5px solid #ffe6bb;
+  border-radius: 10px;
+}
+
+#header .countdown div h3 {
+  font-weight: 700;
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
+#header .countdown div h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 575px) {
+  #header .countdown div {
+    width: 70px;
+    padding: 10px 0;
+    margin: 10px 8px;
+  }
+
+  #header .countdown div h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  #header .countdown div h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+#header .subscribe {
+  font-size: 15px;
+  text-align: center;
+}
+
+#header .subscribe h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff6e9;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#header .subscribe .subscribe-form {
+  min-width: 300px;
+  margin-top: 10px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  text-align: left;
+}
+
+#header .subscribe .subscribe-form input[type=email] {
+  border: 0;
+  padding: 4px 8px;
+  width: calc(100% - 100px);
+}
+
+#header .subscribe .subscribe-form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: -2px;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 20px;
+  background: #ffe6bb;
+  color: #fff;
+  transition: 0.3s;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header .subscribe .subscribe-form input[type=submit]:hover {
+  background: #ffe6bb;
+}
+
+#header .subscribe .error-message {
+  display: none;
+  color: #ffe6bb;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#header .subscribe .sent-message {
+  display: none;
+  color: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+#header .subscribe .loading {
+  display: none;
+  text-align: center;
+  padding: 15px;
+}
+
+#header .subscribe .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #ffe6bb;
+  animation: animate-loading-notify 1s linear infinite;
+}
+
+@keyframes animate-loading-notify {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#header .social-links {
+  margin-top: 10px;
+}
+
+#header .social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
+  padding-top: 14px;
+  margin: 0 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#header .social-links a:hover {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: #fff5f5;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+.about .content h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.about .content h3 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding: 10px 0 0 28px;
+  position: relative;
+}
+
+.about .content ul i {
+  left: 0;
+  top: 12px;
+  position: absolute;
+  font-size: 20px;
+  color: #ffe6bb;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+.contact .info-wrap {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.contact .info i {
+  font-size: 20px;
+  color: #fff;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact .info h4 {
+  padding: 0 0 0 60px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact .info p {
+  padding: 0 0 10px 60px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.contact .info .email p {
+  padding-top: 5px;
+}
+
+.contact .info .social-links {
+  padding-left: 60px;
+}
+
+.contact .info .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.contact .info .social-links a:hover {
+  background: #ffe6bb;
+  color: #fff;
+}
+
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #ffe6bb;
+  color: #fff;
+}
+
+.contact .php-email-form {
+  width: 100%;
+  padding: 30px;
+  padding-top: 0;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.contact .php-email-form .validate {
+  display: none;
+  color: #ffe6bb;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ffe6bb;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.contact .php-email-form input::-moz-placeholder,
+.contact .php-email-form textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact .php-email-form input::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact .php-email-form input {
+  height: 44px;
+}
+
+.contact .php-email-form textarea {
+  padding: 10px 12px;
+}
+
+.contact .php-email-form button[type=submit] {
+  background: #ffe6bb;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: #ffe6bb;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: rgba(19, 19, 19, 0.4);
+  padding: 30px 0;
+  color: #fff;
+  font-size: 14px;
+  position: relative;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+
+#footer .credits a {
+  color: #ffe6bb;
+}
