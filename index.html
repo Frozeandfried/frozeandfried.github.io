@@ -14,11 +14,16 @@
       }
       @media (min-width: 768px) {
         body {
-          padding-top: 150px;
+          padding-top: 50px;
         }
       }
       h1 {
-        font-size: 50px;
+        font-size: 100%;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        font-size: 80%;
       }
       article {
         display: block;
@@ -34,30 +39,35 @@
         color: #efe8e8;
         text-decoration: none;
       }
-      /* .logo {
-        width: 100px;
-        height: 50px;
-
+      img.logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        text-align: center;
       }
-      div img .character {
-        display: flex;
-        size: 100px;
-      } */
+      img.character {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+      }
     </style>
   </head>
   <body bgcolor="2e2929">
-    <!-- <div class="Logo">
-      <img
-        src="https://i.ibb.co.com/dMbYT0y/Logo.png"
-        alt="Froze 'N Fried Logo"
-      />
-    </div>
-    <div class="Character">
-      <img
-        src="https://i.ibb.co.com/hHsG9vf/Character.png"
-        alt="Froze 'N Fried Character"
-      />
-    </div> -->
+    <img
+      class="logo"
+      src="https://i.ibb.co.com/dMbYT0y/Logo.png"
+      alt="Froze 'N Fried Logo"
+    />
+
+    <img
+      class="character"
+      src="https://i.ibb.co.com/hHsG9vf/Character.png"
+      alt="Froze 'N Fried Character"
+    />
+
     <article>
       <h1>This Website Is Under Construction</h1>
       <div>
@@ -66,7 +76,7 @@
           maintenance at the moment, otherwise we&rsquo;ll be ready to Froze 'N
           Fried you as soon as possible
         </p>
-        <p>&mdash; Froze 'N Fried</p>
+        <p>&mdash; Froze 'N Fried &mdash;</p>
       </div>
       <div
         style="
