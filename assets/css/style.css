@@ -14,7 +14,7 @@ body::before {
   top: 0;
   bottom: 0;
   background: rgba(11, 11, 11, 0.535);
-  min-height: 780px;
+  min-height: 1080px;
 }
 
 @media (min-width: 780px) {
