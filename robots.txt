@@ -1,4 +1,4 @@
 User-agent: *
 
 
-Sitemap: https://missface.co.id/sitemap.xml
+Sitemap: https://frozeandfried.com/sitemap.xml
