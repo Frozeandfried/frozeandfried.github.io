@@ -17,8 +17,24 @@
     />
     <meta
       name="keywords"
-      content="froze and fried, ice cream, fried ice cream, Dessert Bali, Froze n Fried, fnf"
+      content="froze and fried, ice cream, fried ice cream, Dessert Bali, Froze n Frie d, fnf"
     />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-R6EY7FT06L"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-R6EY7FT06L");
+    </script>
+    <!-- End of Google Analytics -->
 
     <!-- meta name -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,8 +68,6 @@
     <meta name="language" content="Indonesia" />
     <meta name="geo.region" content="ID-BA" />
     <meta name="geo.placename" content="Bali" />
-    <!-- <meta name="geo.position" content="-6.283818;106.804863" />
-    <meta name="ICBM" content="-6.283818, 106.804863" /> -->
     <meta name="tgn.nation" content="Indonesia" />
 
     <!-- link -->
@@ -134,18 +148,52 @@
         --ButtonRadius: 10px;
         --FontFamily: "Roboto", sans-serif;
       }
+      .button-card-description {
+        margin: 20px;
+      }
       h2,
       h3 {
         color: #59412e;
       }
+      .button-card-text {
+        color: #59412e;
+      }
+      .h-divider {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 1px;
+        width: 80%;
+        border-top: 3px solid #59412e;
+      }
       .instagram-media {
         margin: 0 auto !important;
-
         width: auto;
         border-radius: 10px !important;
       }
       .footer {
         color: #59412e;
+      }
+      .footerimage {
+        width: 80%;
+        height: auto;
+      }
+      #myBtn {
+        bottom: 20px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 10; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        background-color: #fff6e9; /* Set a background color */
+        color: #6b4828; /* Text color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        padding: 15px; /* Some padding */
+        border-radius: 10px; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+      }
+
+      #myBtn:hover {
+        background-color: #a47e56; /* Add a dark-grey background on hover */
+        color: #dfd5c5;
       }
     </style>
 
@@ -168,7 +216,10 @@
           <img src="/assets/img/profile.jpg" alt="Froze and Fried Logo" />
         </div>
         <div class="wrapper-profile-title">Froze and Fried</div>
-        <div class="wrapper-profile-description">Bali, Indonesia</div>
+        <div class="wrapper-profile-description">
+          Best Fried Ice Cream In Town 🍧 <br />
+          Bali, Indonesia
+        </div>
         <div class="wrapper-profile-icons">
           <a
             href="https://maps.app.goo.gl/SF4PagQS1f5N6drh9"
@@ -189,7 +240,7 @@
             ></i
           ></a>
           <a
-            href="https://wa.me/6282266795138"
+            href="https://wa.me/message/H5QJ6SBYJVKGD1"
             target="_blank"
             rel="noopener noreferrer"
             ><i class="fab fa-whatsapp" aria-label="social button"></i
@@ -227,13 +278,47 @@
     </p>
 
     <!-- Simple button -->
+    <!-- Simple button -->
     <div class="wrapper animate__animated animate__fadeIn">
-      <div class="button-card">
-        <a class="button-card-text" href="https://frozeandfried.com">
-          <div class="button-card-title">Froze and Fried</div>
-        </a>
-      </div>
+      <a href="https://frozeandfried.com" target="_blank" rel="noreferrer">
+        <div class="button-card">
+          <img
+            class="button-card-image"
+            loading="lazy"
+            src="./assets/img/website.png"
+            alt="fnf"
+          />
+
+          <div class="button-card-text">
+            <div class="h-divider"></div>
+            <div class="button-card-title">Froze and Fried</div>
+            <div class="button-card-description">Visit Our Website</div>
+          </div>
+        </div>
+      </a>
     </div>
+    <!-- End of Simple button -->
+
+    <!-- Simple button with feature image -->
+    <div class="wrapper animate__animated animate__fadeIn">
+      <a href="./assets/pdf/menu.pdf" target="_blank" rel="noreferrer">
+        <div class="button-card">
+          <img
+            class="button-card-image"
+            loading="lazy"
+            src="./assets/img/menu.png"
+            alt="fnf"
+          />
+
+          <div class="button-card-text">
+            <div class="h-divider"></div>
+            <div class="button-card-title">See Our Menu</div>
+            <div class="button-card-description">View PDF</div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- End of Simple button with feature image -->
 
     <!-- Titles -->
     <div class="wrapper animate__animated animate__fadeIn">
@@ -245,6 +330,7 @@
       <div class="button-card">
         <div class="button-card-text"><h2>Location</h2></div>
         <div class="button-card-description">
+          <!-- Lokasi 1 -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31556.369886988356!2d115.11941641371351!3d-8.639484521200771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2478621f5b693%3A0xa157bd1e893b4293!2sPantai%20Batu%20Bolong!5e0!3m2!1sid!2sid!4v1720143267234!5m2!1sid!2sid"
             width="80%"
@@ -255,7 +341,21 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div class="button-card-text"><h3>2 days ago</h3></div>
+        <div class="button-card-description">Pantai Batu Bolong, Canggu</div>
+        <!-- Lokasi 1 -->
+        <div class="button-card-description">
+          <!-- Lokasi 1 -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15776.302823362908!2d115.25428876498881!3d-8.684350900049413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd240345de542e5%3A0xd6ac47050830f7e!2sPantai%20Sindhu!5e0!3m2!1sid!2sid!4v1721597038434!5m2!1sid!2sid"
+            width="80%"
+            height="auto"
+            style="border: 0; border-radius: 10px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="button-card-description">Pantai Sindhu, Sanur</div>
       </div>
     </div>
     <!-- End of Google Maps Embed Code -->
@@ -268,8 +368,8 @@
     <!-- instagram embed code -->
     <div class="wrapper animate__animated animate__fadeIn">
       <div class="button-card">
-        <div class="button-card-text"><h2>Instagram</h2></div>
-        <div class="button-card-description">
+        <div class="button-card-text">Instagram</div>
+        <div class="button-card-text">
           <blockquote
             class="instagram-media"
             data-instgrm-captioned
@@ -555,7 +655,7 @@
           </blockquote>
           <script async src="//www.instagram.com/embed.js"></script>
         </div>
-        <div class="button-card-text"><h3>Keep In Touch With Us</h3></div>
+        <div class="button-card-description">Keep In Touch With Us</div>
       </div>
     </div>
 
@@ -564,67 +664,45 @@
       <div class="paragraph">About Us</div>
     </div>
 
-    <!-- Simple button -->
-    <div class="wrapper animate__animated animate__fadeIn">
-      <div class="button-card">
-        <a
-          href="https://frozeandfried.com"
-          target="_blank"
-          rel="noreferrer"
-          class="button-card-text"
-        >
-          <div class="button-card-title">Froze and Fried</div>
-          <div class="button-card-description">Website</div>
-        </a>
-      </div>
-    </div>
-    <!-- End of Simple button -->
-
-    <!-- Simple button with feature image -->
-    <div class="wrapper animate__animated animate__fadeIn">
-      <a href="https://frozeandfried.com" target="_blank" rel="noreferrer">
-        <div class="button-card">
-          <img
-            class="button-card-image"
-            loading="lazy"
-            src="./assets/img/menu.png"
-            alt="fnf"
-          />
-          <div class="button-card-text">
-            <div class="button-card-title">Menu</div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <!-- End of Simple button with feature image -->
-
     <!-- Simple button with feature image -->
 
     <div class="wrapper">
       <div class="button-card animate__animated animate__fadeIn">
-        <img
-          class="button-card-image"
-          loading="lazy"
-          src="./assets/img/partnership.webp"
-          alt="Parnership"
-        />
-        <a class="button-card-text">
-          <div class="button-card-title">Partnership</div>
-          <div class="button-card-description">PDF</div>
+        <a
+          class="button-card-text"
+          href="./assets/pdf/Froze and Fried Brand Guideline - 2024.pdf"
+        >
+          <img
+            class="button-card-image"
+            loading="lazy"
+            src="./assets/img/brandguideline.png"
+            alt="Froze and Fried Brand Guideline PDF 2024"
+          />
+
+          <div class="h-divider"></div>
+
+          <div class="button-card-title">Brand Guideline</div>
+          <div class="button-card-description">View PDF</div>
         </a>
       </div>
     </div>
 
     <!-- Footer -->
     <div class="wrapper">
+      <button onclick="topFunction()" id="myBtn" title="Go to top">
+        Back to Top &uarr;
+      </button>
+    </div>
+    <div class="wrapper">
       <a href="https://frozeandfried.com" target="_blank" rel="noreferrer">
         <img
-          class="brand-logo animate__animated animate__fadeIn"
-          src="./assets/img/favicon.png"
+          class="footerimage"
+          src="./assets/img/footer.png"
           alt="froze and fried"
         />
       </a>
-      <div class="footer">&copy; Froze and Fried</div>
+
+      <div class="footer">&copy; Copyright 2024, by Froze and Fried.</div>
     </div>
     <!-- End of Footer -->
 
@@ -635,6 +713,29 @@
         easing: "ease-in-sine",
         once: true,
       });
+    </script>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {};
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        // scrollFunction();
+        // document.body.scrollTop = 0 ; // For Safari
+        // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
     </script>
   </body>
 </html>
